@@ -64,11 +64,11 @@ Two types of neural network architectures are used:
     ```
 2. **RNN (Recurrent Neural Network) Model**: Constructs a simpler RNN model for benchmarking against the LSTM.
     ```
-    model_rnn = Sequential([
-        Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=max_length),
-        SimpleRNN(units=50, return_sequences=True),
-        SimpleRNN(units=25),
-        Dense(units=1, activation='sigmoid')
+    model = Sequential()
+    model.add(Embedding(input_dim=input_dim, output_dim=output_dim))
+    model.add(SimpleRNN(128, dropout=0.7))
+    model.add(Dropout(0.09))
+    model.add(Dense(1, activation='sigmoid'))Dense(units=1, activation='sigmoid')
     ])
     ```
 These are the core layers. You generally start with an Embedding layer, then add LSTM or RNN layers, and end with Dense layers for output.
