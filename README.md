@@ -55,11 +55,11 @@ Here, the sentiment column from the DataFrame is encoded into a numeric format t
 ## Model Building
 Two types of neural network architectures are used:
 1. **LSTM (Long Short-Term Memory) Model**: Builds a multi-layer LSTM model to process sequences and capture temporal dependencies. 
-    ```
+   ```
     model = Sequential()
     model.add(Embedding(input_dim=input_dim, output_dim=output_dim))
-    model.add(SimpleRNN(128, dropout=0.7))
-    model.add(Dropout(0.09))
+    model.add(LSTM(128, dropout=0.2, recurrent_dropout=0))
+    model.add(Dense(64, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
     ```
 2. **RNN (Recurrent Neural Network) Model**: Constructs a simpler RNN model for benchmarking against the LSTM.
