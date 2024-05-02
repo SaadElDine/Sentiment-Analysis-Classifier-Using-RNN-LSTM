@@ -1,4 +1,4 @@
-# Sentiment Analysis of IMDb Reviews Using LSTM and RNN
+# Sentiment Analysis of IMDB Reviews Using LSTM and RNN
 
 This project demonstrates the utilization of Long Short-Term Memory (LSTM) and Recurrent Neural Network (RNN) models to perform sentiment analysis on IMDb movie reviews. The objective is to compare the effectiveness of these models in understanding natural language and to emphasize the importance of early stopping in training neural networks.
 
